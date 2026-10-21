@@ -5,7 +5,6 @@ This release includes the model architecture, training code, and clean-condition
 
 ## System architecture
 ![](assets/fig2_overview.png)
-*Figure from "Parallel Kalman Filtering with Physics-Informed Selective State-Space Models Under Noisy Radar Conditions," IMS RFSA 2026.*
 
 - Physics stream: the known constant-velocity model (F, H) gives the kinematic prior and the innovation
 - Neural stream: a 6-layer selective SSM (Mamba-1) cascade processes the whole track window in parallel
