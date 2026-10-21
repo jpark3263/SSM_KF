@@ -1,11 +1,11 @@
 # SSM_KF
-Parallel Kalman filtering with physics-informed selective state-space models for radar tracking (IEEE IMS 2026)
+Parallel Kalman filtering with physics-informed selective state-space models for radar tracking (IMS RFSA 2026)
 
 This release includes the model architecture, training code, and clean-condition evaluation.
 
 ## System architecture
 ![](assets/fig2_overview.png)
-*Figure from "Parallel Kalman Filtering with Physics-Informed Selective State-Space Models Under Noisy Radar Conditions," IEEE IMS 2026.*
+*Figure from "Parallel Kalman Filtering with Physics-Informed Selective State-Space Models Under Noisy Radar Conditions," IMS RFSA 2026.*
 
 - Physics stream: the known constant-velocity model (F, H) gives the kinematic prior and the innovation
 - Neural stream: a 6-layer selective SSM (Mamba-1) cascade processes the whole track window in parallel
@@ -68,12 +68,17 @@ The 10-frame results were reproduced on an NVIDIA RTX 6000; the 20-frame results
 
 ## Citation
 ```bibtex
-@inproceedings{park2026parallel,
-  title     = {Parallel Kalman Filtering with Physics-Informed Selective State-Space Models Under Noisy Radar Conditions},
-  author    = {Park, Jinhyeok and Padhy, Apurba Prasad and Cho, Han and Mukhopadhyay, Saibal},
-  booktitle = {IEEE/MTT-S International Microwave Symposium (IMS)},
-  year      = {2026}
-}
+@INPROCEEDINGS{11624260,
+  author={Park, Jinhyeok and Padhy, Apurba Prasad and Cho, Han and Mukhopadhyay, Saibal},
+  booktitle={2026 IEEE MTT-S Radio Frequency Systems and Applications Symposium (IMS RFSA)}, 
+  title={Parallel Kalman Filtering with Physics-Informed Selective State-Space Models for Robust Radar Sensing}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={63-66},
+  keywords={Modeling;Kalman filters;Sequences;Sequential analysis;Timing;Physics;Measurement;Printing;Equations;Gain;Kalman filtering;physics-informed learning;radar perception;state-space model},
+  doi={10.1109/IMSRFSA70221.2026.11624260}}
+
 ```
 
 This work was supported in part by COGNISENSE, one of seven centers in JUMP 2.0, a Semiconductor Research Corporation (SRC) program sponsored by DARPA.
