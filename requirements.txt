@@ -1,0 +1,11 @@
+# Tested with Python 3.10.19, CUDA 12.8
+torch==2.9.1
+numpy==2.2.6
+pandas==2.3.3
+matplotlib==3.10.8
+opencv-python==4.12.0.88
+tqdm==4.67.1
+
+# Optional: CUDA kernels for the selective SSM (--ssm_type mamba1_cuda, the default on GPU).
+# Without it, use --ssm_type mamba1 (pure-PyTorch, same weights and outputs up to fp32 rounding).
+# Install separately, after torch:  pip install mamba-ssm==2.2.6.post3 --no-build-isolation
