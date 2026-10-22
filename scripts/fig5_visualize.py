@@ -1,4 +1,4 @@
-"""Fig. 4: qualitative comparison on RADIATE radar frames.
+"""Fig. 5: qualitative comparison on RADIATE radar frames.
 
 Runs the models on every annotated object track (>= 10 frames) of a test sequence and draws the
 predicted rotated boxes on the Navtech_Cartesian radar images. Colours: GT green, KalmanNet red,
@@ -161,11 +161,11 @@ def visualize_sequence(sequence_path, models, device, output_dir, max_frames=Non
 
 
 def main():
-    parser = add_common_args(argparse.ArgumentParser(description='Fig. 4: draw predicted boxes on RADIATE radar frames'))
+    parser = add_common_args(argparse.ArgumentParser(description='Fig. 5: draw predicted boxes on RADIATE radar frames'))
     parser.set_defaults(models=['KalmanNet', 'SSMPhysics'])
     parser.add_argument('--test_seq_names', type=str, nargs='+', default=['city_7_0'],
-                        help='Test sequences to visualise (Fig. 4 uses city_7_0)')
-    parser.add_argument('--output_dir', type=str, default='./results/fig4')
+                        help='Test sequences to visualise (Fig. 5 uses city_7_0)')
+    parser.add_argument('--output_dir', type=str, default='./results/fig5')
     parser.add_argument('--max_frames', type=int, default=None, help='Visualise only the first N frames')
     parser.add_argument('--fps', type=int, default=10, help='Frame rate of the output video')
     args = parser.parse_args()
